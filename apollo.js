@@ -7,7 +7,7 @@ var express = require('express'),
     routes = require('./routes'),
     config = require('./config'),
     auth = require('./controllers/auth');
-   
+
 // Create server
 var app = express();
 var server = http.createServer(app);
@@ -39,7 +39,7 @@ app.use(function (req, res) {
 app.use(express.errorHandler());
 
 
-server.listen(app.get('port'), app.get('hostname'), function(){
+server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
   routes(app,auth,server);
 });

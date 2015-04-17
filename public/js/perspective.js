@@ -1,5 +1,5 @@
 define(["jquery"], function($) {
-	
+
 	function scrollY() {
 		return window.pageYOffset || docElem.scrollTop;
 	}
@@ -31,7 +31,8 @@ define(["jquery"], function($) {
 		var showMenu = document.getElementById( 'showMenu' ),
 			perspectiveWrapper = document.getElementById( 'perspective' ),
 			container = $( '.container' )[0],
-			contentWrapper = $( '.wrapper' )[0];
+			contentWrapper = $( '.wrapper' )[0],
+      background = $( '.album_bg' )[0];
 
 		showMenu.addEventListener( clickevent, function( ev ) {
 			ev.stopPropagation();
@@ -44,10 +45,11 @@ define(["jquery"], function($) {
 			// add modalview class
 			// classie.add( perspectiveWrapper, 'modalview' );
 			$(perspectiveWrapper).addClass('modalview');
+      $(background).removeClass('animated');
 			// animate..
 			setTimeout( function() { $(perspectiveWrapper).addClass('animate'); }, 25 );
 		});
-		
+
 		container.addEventListener( clickevent, function( ev ) {
 			if( $(perspectiveWrapper).hasClass('animate') ) {
 				var onEndTransFn = function( ev ) {
@@ -55,6 +57,7 @@ define(["jquery"], function($) {
 					this.removeEventListener( transEndEventName, onEndTransFn );
 					//classie.remove( perspectiveWrapper, 'modalview' );
 					$(perspectiveWrapper).removeClass('modalview');
+          $(background).addClass('animated');
 					// mac chrome issue:
 					document.body.scrollTop = document.documentElement.scrollTop = docscroll;
 					// change top of contentWrapper
@@ -66,7 +69,7 @@ define(["jquery"], function($) {
 				else {
 					onEndTransFn.call();
 				}
-				
+
 				$(perspectiveWrapper).removeClass('animate');
 			}
 		});

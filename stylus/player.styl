@@ -60,11 +60,13 @@ div.container{
 		-moz-filter: grayscale(100%) contrast(14%) brightness(197%);
 		opacity:0.9;
 
-		animation-name: masked-animation;
-		animation-duration: 160s;
-		animation-iteration-count: infinite;
-		transform-origin: 20% 80%;
-		transform: scale(1) rotate(0);
+    &.animated {
+  		animation-name: masked-animation;
+  		animation-duration: 160s;
+  		animation-iteration-count: infinite;
+  		transform-origin: 20% 80%;
+  		transform: scale(1) rotate(0);
+    }
 	}
 
 	.gradient_cover{
