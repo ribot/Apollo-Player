@@ -10,12 +10,11 @@ div.container{
 		font-weight:normal;
 	}
 	#showMenu{
-		
+
 		&:hover{
-			background:black;
+			background:#00a2db;
 			color:white;
-			border-radius: 12px;
-		}
+    }
 		opacity:1;
 		transition: 0.3s all;
 		font-family: 'Glyphicons Halflings';
@@ -23,7 +22,7 @@ div.container{
 		background:rgba(255, 255, 255, .78);
 		color:black;
 		margin-top:10px;
-		border-radius:0;
+		border-radius: 12px;
 		font-size: 19px;
 		padding: 6px 15px;
 		-webkit-font-smoothing: antialiased;
@@ -32,31 +31,17 @@ div.container{
 
 			content: "\e003";
 		}
-		
-		
+
+
 	}
 	h2.logo{
-		font-size: 21px;
 		display: inline-block;
 		margin-left: 17px;
+    width: 75px;
+    height: 40px;
 	}
 	.rocket_holder{
 		text-align: right;
-	}
-	h2.rocket{
-		font-family: "entypo";
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		position: relative;
-		top: 4px;
-		left: 10px;
-		border: 1px solid #fff;
-		-webkit-border-radius: 100%;
-		border-radius: 100%;
-		padding: 0px 8px;
-		font-size: 40px;
-		line-height: 32px;
 	}
 	.wrapper{
 		height:100%;
@@ -93,10 +78,10 @@ div.container{
 		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
 		background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
 		background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
-	
+
 
 		z-index:-1;
-		
+
 	}
 	.bomb_animation{
 		font-size: 300px;
@@ -118,18 +103,18 @@ div.container{
 		&.animate{
 			animation: bomb-animation linear 2s;
   			animation-iteration-count: 1;
-  			
-			
+
+
 		}
 	}
 
 	#video_background {
-		position: fixed; 
-		right: 0; 
+		position: fixed;
+		right: 0;
 		bottom: 0;
-		min-width: 100%; 
+		min-width: 100%;
 		min-height: 100%;
-		width: auto; 
+		width: auto;
 		height: auto;
 		z-index: -1000;
 		// overflow: hidden;
@@ -151,14 +136,14 @@ div.container{
 			overflow:hidden;
 			color:white;
 			.icon{
-				
+
 				font-family:"entypo";
 				font-size:240px;
 				position:relative;
 				top: -87px;
 			}
 		}
-		
+
 		span,.icon_wrapper{
 			float:left;
 			clear:left;
@@ -170,9 +155,9 @@ div.container{
 			margin-left: 17px;
 		}
 	}
-	
+
 	.tooltip.bottom .tooltip-arrow{
-		
+
 		border-bottom-color: white;
 	}
 	.tooltip-inner{
@@ -184,7 +169,7 @@ div.container{
 		padding: 0 0px;
 		background: rgba(255,255,255,.78)
 		.currently_playing{
-			
+
 			.album_container{
 				border-left: 1px solid black;
 				border-right: 1px solid black;
@@ -225,8 +210,8 @@ div.container{
 
 			.row.parentrow{
 				margin-top:45px;
-				
-				
+
+
 
 				h1{
 
@@ -245,12 +230,12 @@ div.container{
 
 				}
 			}
-			
-			
+
+
 		}
 		.track_desc{
 			.row.parentrow{
-				
+
 				margin-top:40px;
 
 				.tooltip-inner {
@@ -263,7 +248,7 @@ div.container{
 				.bombrow{
 					text-align: center;
 				}
-				
+
 				a.bomb{
 					animation-duration: 1s;
 					animation-easing: linear;
@@ -277,7 +262,7 @@ div.container{
 						font-size: 13px;
 						font-weight: bold;
 						color: white;
-						
+
 					}
 					margin-top: 19px;
 					background: none;
@@ -285,18 +270,18 @@ div.container{
 					width:auto;
                 	font-size: 45px;
 					font-family: 'Glyphicons Regular';
-					
+
 					&:before{
-						
+
 						content: "\E290 ";
 
 
 					}
 					&:hover{
 						color:black;
-						
+
 					}
-					
+
 				}
 				.rowdl {
 					border-left:1px solid #000;
@@ -309,12 +294,12 @@ div.container{
 						dt{ float:left;display:inline; clear:left; margin-right:5px; color:black;font-weight: bold;}
 					}
 				}
-				
+
 			}
-			
+
 
 		}
-		
+
 	}
 
 	.playlist{

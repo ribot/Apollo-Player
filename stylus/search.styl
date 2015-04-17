@@ -10,7 +10,7 @@
 	margin-left: auto;
 	padding-left: 15px;
 	padding-right: 15px;
-	
+
 	.outer-nav{
 		height:100%;
 		width: 70%;
@@ -27,48 +27,53 @@
 			// position:relative;
 		}
 
-		.profile{
-			.avatar{
-				a.logout{
-					background: rgba(0,0,0,0.6);
-					padding: 40px 37px;
-					-webkit-border-radius: 70px; /* Saf3+, Chrome */
-					border-radius: 70px; /* Opera 10.5, IE 9 */
-					border:1px solid white;
-					position:absolute;
-					z-index:999;
-					opacity:0;
-					&:before{
-						content: "logout";
-						color:white;
-						font-size:10px;
-						text-transform: uppercase;
-					}
-					&:hover{
-						opacity:1;
-					}
-				}
-				img{
-					-webkit-border-radius: 100%; /* Saf3+, Chrome */
-					border-radius: 100%; /* Opera 10.5, IE 9 */
-					/*-moz-border-radius: 30px;  Disabled for FF1+ */
-					width: 115px;
-					height: 115px;
-				}
+		.profile {
+      padding-left: 15px;
+
+      .avatar {
+        display: inline-block;
+        a.logout {
+          background: rgba(0,0,0,0.6);
+          padding: 20px 16px;
+          -webkit-border-radius: 70px; /* Saf3+, Chrome */
+          border-radius: 70px; /* Opera 10.5, IE 9 */
+          border:1px solid white;
+          position:absolute;
+          z-index:999;
+          opacity:0;
+          &:before{
+            content: "logout";
+            color:white;
+            font-size:10px;
+            text-transform: uppercase;
+            position: relative;
+            top: -5px;
+          }
+          &:hover{
+            opacity:1;
+          }
+        }
+        img {
+          -webkit-border-radius: 100%; /* Saf3+, Chrome */
+          border-radius: 100%; /* Opera 10.5, IE 9 */
+          /*-moz-border-radius: 30px;  Disabled for FF1+ */
+          width: 75px;
+          height: 75px;
+        }
+      }
+			h1 {
+        display: inline-block;
+			  vertical-align: middle;
+        margin: 0 0 0 30px;
 			}
-			.copy{
-				h1{
-					margin: 0;
-				}
-				p{
-					color:#ffcb42;
-					font-weight: bold;
-					font-family: 'latohairline';
-					em{
-						color:white;
-						font-style:normal;
-						margin-left: 9px;
-					}
+			p{
+				color:#ffcb42;
+				font-weight: bold;
+				font-family: 'latohairline';
+				em{
+					color:white;
+					font-style:normal;
+					margin-left: 9px;
 				}
 			}
 			.specials{
@@ -87,14 +92,14 @@
 					font-size: 23px;
 					font-family: 'Glyphicons Regular';
 					&:before{
-						
+
 						content: "\E290 ";
 
 
 					}
 					&:hover{
 						background:red;
-						
+
 					}
 					&.bombed_true{
 						background: #333;
@@ -117,9 +122,9 @@
 					color: #333;
 					font-style: italic;
 				}
-				
+
 			}
-			
+
 			.form-search{
 				color:white;
 				margin:25px 0px;
@@ -137,7 +142,7 @@
 					}
 
 
-					::-webkit-input-placeholder { 
+					::-webkit-input-placeholder {
 					    color: white;
 					    // font-family: 'latohairline';
 					    // text-transform:uppercase;
@@ -155,7 +160,7 @@
 						color:white;
 
 						&.loading{
-							
+
 							span{
 								background: url('/images/loadinfo.gif') no-repeat;
 								&:before{
@@ -165,7 +170,7 @@
 						}
 					}
 				}
-				
+
 			}
 			#results{
 				height:100%;
@@ -190,9 +195,9 @@
 							background: url('/images/loadinfo.gif') no-repeat 0px 3px;
 							visibility: visible;
 						}
-						
+
 					}
-					
+
 					tr.added{
 						color:rgba(255,255,255,0.2);
 						a.addtrack:not(.loading){
@@ -206,15 +211,15 @@
 						}
 					}
 				}
-				.table{ 
+				.table{
 					width:100%;
 					table-layout: fixed;
 					thead{
 						width:100%;
 					}
-					
+
 					th{
-						color:#ffcb42;
+						color:#00a2db;
 						font-family: 'latolight';
 						border: none;
 						border-bottom:1px solid rgba(255,255,255,0.2);
@@ -237,17 +242,17 @@
 								text-overflow: ellipsis;
 								white-space: nowrap;
 							}
-							
+
 						}
 						&.artist{
 							width: 28%;
-							
+
 						}
 						&.album{
 							width: 33%;
 						}
 						&.add{
-							width: 5%;	
+							width: 5%;
 						}
 					}
 				}
@@ -259,10 +264,10 @@
 						text-overflow: ellipsis;
 						white-space: nowrap;
 					}
-					
+
 					tbody tr:first-child td{
 						border-top:none  !important;
-						
+
 					}
 
 				}
