@@ -67,23 +67,23 @@ Now that you have Mopidy up and running, let's setup up Apollo as our Frontend f
       ```
     3. add this structure into config.js file:
         ```javascript
-        var config = {
-          development: {
-            server: {
-              host: "localhost",
-              port: 3000,
-            },
-            "callback":"THE CALLBACKURL CONFIGURED IN THE GOOGLE PROJECT"
-            "consumerKey":"YOUR GOOGLE CLIENT ID",
-            "consumerSecret":"YOUR GOOGLE CLIENT SECRET",
-            "default_playlist_uri":"SPOTIFY URI TO DEFAULT PLAY LIST (cannot be private!)", (optional)
-            "htmlPretty": "true", (optional)
-            "bombThreshold": 3, (optional)
-            "bomb_track": "SPOTIFY TRACK TO PLAY ON BOMBING" (optional default is "spotify:track:1JFeNGtkTjiTWgSSz0iHq5")
-          }
+        module.exports = {
+          server: {
+            host: 'localhost',
+            port: process.env.PORT || 3000,
+          },
+          mopidy: {
+            host: 'localhost:6680'
+          },
+          googleAuth: {
+            consumerKey: 'GOOGLE_CLIENT_ID',
+            consumerSecret: 'GOOGLE_CLIENT_SECRET'
+          },
+          default_playlist_uri: "", // Optional. Spotify playlist URI to play when no songs are queued. Cannot be private
+          htmlPretty: "true", // Optional. If the HTML should be outputted as pretty
+          bombThreshold: 3, // Optional. How many bomb votes are needed to skip a song
+          bomb_track: "spotify:track:1JFeNGtkTjiTWgSSz0iHq5" // Optional. Track to play when a song is skipped
         };
-
-        module.exports = config[process.env.NODE_ENV || 'development'];
         ```
 
     4. Add your Spotify default playlist uri (this has to be a public playlist to work). This is what plays when all the songs in the queue have finished playing (optional)

@@ -51,9 +51,9 @@ module.exports = function () {
 	});
 
 	passport.use( new GoogleStrategy({
-				clientID: config.consumerKey,
-				clientSecret: config.consumerSecret,
-				callbackURL: config.callback
+				clientID: config.googleAuth.consumerKey,
+				clientSecret: config.googleAuth.consumerSecret,
+				callbackURL: 'http://' + config.server.host + ':' + config.server.port + '/auth/google/callback'
 			},
 				function(request, accessToken, refreshToken, profile, done) {
 					var profile_photo_url = gravatar.url(profile.picture, {s: '200'});

@@ -23,7 +23,7 @@ function Player (app,server) {
 	events.EventEmitter.call(this);
 
 	this.mopidy = new Mopidy({
-	    webSocketUrl: "ws://localhost:6680/mopidy/ws/"
+	    webSocketUrl: "ws://" + config.mopidy.host + "/mopidy/ws/"
 	});
 
 	this.status = {
