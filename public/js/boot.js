@@ -5,8 +5,8 @@ function ($,main, Notification) {
 
 	main.start();
 
-    
-	
+
+
 	$('.index #login').on('click',function(e){
         e.preventDefault();
 
@@ -18,7 +18,7 @@ function ($,main, Notification) {
         }else{
             $('#login_form').submit();
         }
-        
+
     });
 
 });

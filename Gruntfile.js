@@ -21,10 +21,24 @@ module.exports = function(grunt) {
         }
       }
     },
+    stylus: {
+      compile: {
+        files: {
+          'public/css/style.css': 'stylus/style.styl'
+        }
+      }
+    },
     watch: {
       scripts: {
         files: ['public/**/*.js'],
         tasks: ['requirejs'],
+        options: {
+          spawn: false,
+        },
+      },
+      stylus: {
+        files: ['stylus/*.styl'],
+        tasks: ['stylus'],
         options: {
           spawn: false,
         },
@@ -34,9 +48,10 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['requirejs']);
+  grunt.registerTask('default', ['requirejs', 'stylus']);
 
 };

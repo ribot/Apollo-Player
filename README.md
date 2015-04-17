@@ -113,3 +113,7 @@ Finished!
 
 - [Ask questions here](https://groups.google.com/forum/#!forum/apolloplayer)
 - [Report Bugs here](https://github.com/samcreate/Apollo-Player/issues)
+
+### Credit
+
+- Main background: [Not in the spotlight by Caroline Granycome](https://www.flickr.com/photos/cgranycome/10382878966/in/photolist-7Czew1-ayDLk8-rDdFsm-7cZxm3-6XYMyc-asZcbB-ohXABH-s8gD27-qBDdZq-aBFUrc-aASKb3-gPuYbA-8Pzjiq-6f3Zj-rJaepX-acWSUe-5apw6r-4ceaRR-eWb6v7-bhzxC6-9Uyxtw-Dwe2M-acVczK-rmGKtp-4P9JGL-fzi1My-5vbGRE-bZKSwq-fJ9t5d-552BQL-5b2bJz-4P9JJh-619xYr-9eJu6m-oRCYoA-acW4FG-9HHGYa-2xvyxD-7C6qWz-hsTi5E-aAuMe8-avnont-5buUZ2-5CY8o8-ccUma9-T4mg-fCfnhM-5PM6q-eCFAK5-8EtSuw) (CC BY-SA 2.0)
