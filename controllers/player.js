@@ -29,7 +29,7 @@ function Player (app,server) {
 	this.status = {
 		'now_playing' : null,
 		'error_offline_msg' : "Music Server is offline",
-		'playbackstatus':''
+		'playbackstatus':'PAUSED'
 	};
 
 	this.online = false;
@@ -53,8 +53,10 @@ function Player (app,server) {
 		this.mopidy.playback.pause().then(null, console.error.bind(console));
 	}
 	this.play = function(track){
-		this.status.playbackstatus = 'PLAYING';
-		this.mopidy.playback.play().then(null, console.error.bind(console));
+    if(self.status.playbackstatus != "PLAYING"){
+  		this.status.playbackstatus = 'PLAYING';
+  		this.mopidy.playback.play().then(null, console.error.bind(console));
+    }
 	}
 	this.playpause = function(req, res){
 		if(self.status.playbackstatus == "PLAYING"){
@@ -248,6 +250,7 @@ function Player (app,server) {
 	this._playbackStarted = function(track){
 		self.emit('playback:started', track);
 		console.log('playback:started', track);
+    this.status.playbackstatus = 'PLAYING';
 
 		// track:added causes the client to re-read the playlist.
 		// Thus, we don't care if a track has been added or removed.
@@ -266,6 +269,7 @@ function Player (app,server) {
 
 	this._playbackEnded = function(lastTlTrack){
 		console.log('_playbackEnded: ', lastTlTrack);
+    this.status.playbackstatus = 'PAUSED';
 
 
 		// Delete from (frontend) cache the track that now has been played
